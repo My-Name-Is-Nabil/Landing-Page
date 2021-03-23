@@ -14,7 +14,7 @@ In this project we aim to enhance the user's experience with the landing page by
 
 The function "createNavBar()" is a self-invoking function that builds a navigation bar using a document fragment. First, it creates "li" items as much as there are sections and add an appropriate class for them to style them, then it appends each item to the document fragment. After that, the fragment is appended to "ul" element of the navigation bar.
 
-The navigation bar disappears after two seconds using "setInterval" function, but if the user scrolls or hovers over the bottom of the page the navigation will reappear and the timer will be reset.
+The navigation bar disappears after two seconds using "setTimeout" function, but if the user scrolls or hovers over the bottom of the page the navigation will reappear and the timer will be reset.
 
 ## Distinguish Section in View
 

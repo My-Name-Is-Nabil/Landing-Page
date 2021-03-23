@@ -5,7 +5,7 @@ const numberOfSections = sections.length;
 const nav = document.querySelector('#navbar__list');
 const scrollToTopButton = document.querySelector('.scroll-up');
 // Hide scroll bar every 2 seconds
-var hideNavBarTimer = setInterval(hideNavBar,2000);
+var hideNavBarTimer = setTimeout(hideNavBar,2000);
 
 
 //Function
@@ -39,10 +39,11 @@ function scrollToSection(event){
 
 function highlightSection(){
     // Reset timer 
-    clearInterval(hideNavBarTimer);
+    clearTimeout(hideNavBarTimer);
     const footer = document.querySelector('.page__footer');
     footer.classList.remove('hide');
-    hideNavBarTimer=setInterval(hideNavBar,2000);
+    hideNavBarTimer=setTimeout(hideNavBar,2000);
+
     const activeSection = document.querySelector('.active-section');
     const activeSectionNav = document.querySelector('.active-section-nav');
     for(let i=1;i<numberOfSections;i++){
@@ -97,6 +98,7 @@ function hideNavBar(){
 
 
 nav.addEventListener('click',scrollToSection);
+scrollToTopButton.addEventListener('click',scrollToTop);
 document.addEventListener('scroll',function(){
     highlightSection();
     showscrollToTopButton();
@@ -105,14 +107,18 @@ document.addEventListener('DOMContentLoaded',function(){
     highlightSection();
     showscrollToTopButton();
 });
-scrollToTopButton.addEventListener('click',scrollToTop);
 document.addEventListener('mousemove',function(event){
     if (window.outerHeight-event.screenY<50){
-        clearInterval(hideNavBarTimer);
-        hideNavBarTimer=setInterval(hideNavBar,2000);
+        // Reset Timer
+        clearTimeout(hideNavBarTimer);
+        hideNavBarTimer=setTimeout(hideNavBar,2000);
         const footer = document.querySelector('.page__footer');
         footer.classList.remove('hide');
     }
-})
+});
+window.addEventListener('resize',function(){
+    highlightSection();
+    showscrollToTopButton();
+});
 
 showscrollToTopButton();
