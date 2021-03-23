@@ -13,7 +13,7 @@ The navigation bar disappears after two seconds using "setInterval" function, bu
 
 ## Distinguish Section in View
 
-The section in view will have a distinct class called "active-section", this class will be added by the function "highlightSection()", in this functionw will also add the "active-section-nav" class to highlight the section in the navigation bar. The "active-section" class will give the section a black background and the "active-section-nav" class will give the active section nav item a yellow color.
+The section in view will have a distinct class called "active-section", this class will be added by the function "highlightSection()", this function will also add the "active-section-nav" class to highlight the current section in the navigation bar. The "active-section" class will give the section a black background and the "active-section-nav" class will give the active section nav item a yellow color.
 
 ## Scroll To Section
 
@@ -22,5 +22,5 @@ the browser to the required section, the scrolling will be smooth due to the css
 
 ## Scroll To Top Button
 
-If the browser is scrolled bellof the fold of the page, a scroll to top button will appear at the bottom right of the screen, this is achieved by "showScrollToTopButton()" function.
+If the browser is scrolled bellow the fold of the page, a scroll to top button will appear at the bottom right of the screen, this is achieved by "showScrollToTopButton()" function.
 Clicking on the button will scroll the user to the top of the page using the function "scrollToTop()".
