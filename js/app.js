@@ -120,5 +120,3 @@ window.addEventListener('resize',function(){
     highlightSection();
     showscrollToTopButton();
 });
-
-showscrollToTopButton();
