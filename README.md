@@ -1,9 +1,14 @@
 # Landing Page Project
 ## Table Of Contents 
+- Introduction
 - Building Navigation Bar
 - Distinguish Section in View
 - Scroll To Section
 - Scroll To Top Button
+
+## Introduction
+
+In this project we aim to enhance the user's experience with the landing page by adding a navigation bar dynamically, highlighting the section in view,  allowing the user to scroll to the desired section using the navigation bar and adding a button to scroll to the top of the page.
 
 ## Building Navigation Bar
 
